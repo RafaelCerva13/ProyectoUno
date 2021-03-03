@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CRUDRModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PERSONAL">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar" MaxLength="15" />
+          <Property Name="APELLIDO_P" Type="varchar" MaxLength="15" />
+          <Property Name="APELLIDO_M" Type="varchar" MaxLength="15" />
+          <Property Name="EDAD" Type="int" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <Function Name="AGREGAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NOMBRE" Type="varchar" Mode="In" />
+          <Parameter Name="APELLIDO_P" Type="varchar" Mode="In" />
+          <Parameter Name="APELLIDO_M" Type="varchar" Mode="In" />
+          <Parameter Name="EDAD" Type="int" Mode="In" />
+          <Parameter Name="IsActive" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="LISTAR_ESTADO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="MOSTRAR_DATOS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IsActive" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="MOSTRAR_DATOSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="MOSTRAR_DATOSU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IsActive" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="P_SELECCIONAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="PRO_SELECCIONAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="PROC_SELEC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="int" Mode="In" />
+          <Parameter Name="NOMBRE" Type="varchar" Mode="In" />
+          <Parameter Name="APELLIDO_P" Type="varchar" Mode="In" />
+          <Parameter Name="APELLIDO_M" Type="varchar" Mode="In" />
+          <Parameter Name="EDAD" Type="int" Mode="In" />
+          <Parameter Name="IosActive" Type="bit" Mode="In" />
+          <Parameter Name="ELEGIR" Type="char" Mode="In" />
+        </Function>
+        <Function Name="PROC_TODO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="int" Mode="In" />
+          <Parameter Name="NOMBRE" Type="varchar" Mode="In" />
+          <Parameter Name="APELLIDO_P" Type="varchar" Mode="In" />
+          <Parameter Name="APELLIDO_M" Type="varchar" Mode="In" />
+          <Parameter Name="EDAD" Type="int" Mode="In" />
+          <Parameter Name="IsActive" Type="bit" Mode="In" />
+          <Parameter Name="ELEGIR" Type="char" Mode="In" />
+        </Function>
+        <Function Name="PROC_TODOP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="int" Mode="In" />
+          <Parameter Name="NOMBRE" Type="varchar" Mode="In" />
+          <Parameter Name="APELLIDO_P" Type="varchar" Mode="In" />
+          <Parameter Name="APELLIDO_M" Type="varchar" Mode="In" />
+          <Parameter Name="EDAD" Type="int" Mode="In" />
+          <Parameter Name="IsActive" Type="bit" Mode="In" />
+          <Parameter Name="ELEGIR" Type="char" Mode="In" />
+        </Function>
+        <Function Name="PROC_TODOPP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="int" Mode="In" />
+          <Parameter Name="NOMBRE" Type="varchar" Mode="In" />
+          <Parameter Name="APELLIDO_P" Type="varchar" Mode="In" />
+          <Parameter Name="APELLIDO_M" Type="varchar" Mode="In" />
+          <Parameter Name="EDAD" Type="int" Mode="In" />
+          <Parameter Name="IsActive" Type="bit" Mode="In" />
+          <Parameter Name="ELEGIR" Type="char" Mode="In" />
+        </Function>
+        <Function Name="PROCED_SELEC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="CRUDRModel1StoreContainer">
+          <EntitySet Name="PERSONAL" EntityType="Self.PERSONAL" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CRUDRModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PERSONAL">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBRE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="APELLIDO_P" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="APELLIDO_M" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="EDAD" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="CRUDREntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PERSONAL" EntityType="Self.PERSONAL" />
+          <FunctionImport Name="LISTAR_ESTADO" ReturnType="Collection(Boolean)" />
+          <FunctionImport Name="MOSTRAR_DATOS" ReturnType="Collection(CRUDRModel1.MOSTRAR_DATOS_Result)">
+          <Parameter Name="IsActive" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="MOSTRAR_DATOSP" ReturnType="Collection(CRUDRModel1.MOSTRAR_DATOSP_Result)">
+          <Parameter Name="ID" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="MOSTRAR_DATOSU" ReturnType="Collection(CRUDRModel1.MOSTRAR_DATOSU_Result)">
+          <Parameter Name="IsActive" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="P_SELECCIONAR" ReturnType="Collection(CRUDRModel1.P_SELECCIONAR_Result)">
+          <Parameter Name="ID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="PRO_SELECCIONAR" ReturnType="Collection(CRUDRModel1.PRO_SELECCIONAR_Result)">
+          <Parameter Name="ID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="PROC_SELEC" ReturnType="Collection(CRUDRModel1.PROC_SELEC_Result)">
+            <Parameter Name="ID" Mode="In" Type="Int32" />
+            <Parameter Name="NOMBRE" Mode="In" Type="String" />
+            <Parameter Name="APELLIDO_P" Mode="In" Type="String" />
+            <Parameter Name="APELLIDO_M" Mode="In" Type="String" />
+            <Parameter Name="EDAD" Mode="In" Type="Int32" />
+            <Parameter Name="IosActive" Mode="In" Type="Boolean" />
+            <Parameter Name="ELEGIR" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="PROC_TODO" ReturnType="Collection(CRUDRModel1.PROC_TODO_Result)">
+            <Parameter Name="ID" Mode="In" Type="Int32" />
+            <Parameter Name="NOMBRE" Mode="In" Type="String" />
+            <Parameter Name="APELLIDO_P" Mode="In" Type="String" />
+            <Parameter Name="APELLIDO_M" Mode="In" Type="String" />
+            <Parameter Name="EDAD" Mode="In" Type="Int32" />
+            <Parameter Name="IsActive" Mode="In" Type="Boolean" />
+            <Parameter Name="ELEGIR" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="PROC_TODOP" ReturnType="Collection(CRUDRModel1.PROC_TODOP_Result)">
+            <Parameter Name="ID" Mode="In" Type="Int32" />
+            <Parameter Name="NOMBRE" Mode="In" Type="String" />
+            <Parameter Name="APELLIDO_P" Mode="In" Type="String" />
+            <Parameter Name="APELLIDO_M" Mode="In" Type="String" />
+            <Parameter Name="EDAD" Mode="In" Type="Int32" />
+            <Parameter Name="IsActive" Mode="In" Type="Boolean" />
+            <Parameter Name="ELEGIR" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="PROC_TODOPP" ReturnType="Collection(CRUDRModel1.PROC_TODOPP_Result)">
+            <Parameter Name="ID" Mode="In" Type="Int32" />
+            <Parameter Name="NOMBRE" Mode="In" Type="String" />
+            <Parameter Name="APELLIDO_P" Mode="In" Type="String" />
+            <Parameter Name="APELLIDO_M" Mode="In" Type="String" />
+            <Parameter Name="EDAD" Mode="In" Type="Int32" />
+            <Parameter Name="IsActive" Mode="In" Type="Boolean" />
+            <Parameter Name="ELEGIR" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="PROCED_SELEC" ReturnType="Collection(CRUDRModel1.PROCED_SELEC_Result)" />
+          <FunctionImport Name="AGREGAR">
+            <Parameter Name="NOMBRE" Mode="In" Type="String" />
+            <Parameter Name="APELLIDO_P" Mode="In" Type="String" />
+            <Parameter Name="APELLIDO_M" Mode="In" Type="String" />
+            <Parameter Name="EDAD" Mode="In" Type="Int32" />
+            <Parameter Name="IsActive" Mode="In" Type="Boolean" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="MOSTRAR_DATOS_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="NOMBRE" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="APELLIDO_P" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="APELLIDO_M" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="EDAD" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="MOSTRAR_DATOSP_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="NOMBRE" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="APELLIDO_P" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="APELLIDO_M" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="EDAD" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="MOSTRAR_DATOSU_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="NOMBRE" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="APELLIDO_P" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="APELLIDO_M" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="EDAD" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="P_SELECCIONAR_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="NOMBRE" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="APELLIDO_P" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="APELLIDO_M" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="EDAD" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="PRO_SELECCIONAR_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="NOMBRE" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="APELLIDO_P" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="APELLIDO_M" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="EDAD" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="PROC_SELEC_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="NOMBRE" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="APELLIDO_P" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="APELLIDO_M" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="EDAD" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="PROC_TODO_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="NOMBRE" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="APELLIDO_P" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="APELLIDO_M" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="EDAD" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="PROC_TODOP_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="NOMBRE" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="APELLIDO_P" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="APELLIDO_M" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="EDAD" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="PROC_TODOPP_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="NOMBRE" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="APELLIDO_P" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="APELLIDO_M" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="EDAD" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="PROCED_SELEC_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="NOMBRE" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="APELLIDO_P" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="APELLIDO_M" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="EDAD" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CRUDRModel1StoreContainer" CdmEntityContainer="CRUDREntities1">
+          <EntitySetMapping Name="PERSONAL">
+            <EntityTypeMapping TypeName="CRUDRModel1.PERSONAL">
+              <MappingFragment StoreEntitySet="PERSONAL">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+                <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+                <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="LISTAR_ESTADO" FunctionName="CRUDRModel1.Store.LISTAR_ESTADO" />
+          <FunctionImportMapping FunctionImportName="MOSTRAR_DATOS" FunctionName="CRUDRModel1.Store.MOSTRAR_DATOS">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CRUDRModel1.MOSTRAR_DATOS_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+                <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+                <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="MOSTRAR_DATOSP" FunctionName="CRUDRModel1.Store.MOSTRAR_DATOSP">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CRUDRModel1.MOSTRAR_DATOSP_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+                <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+                <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="MOSTRAR_DATOSU" FunctionName="CRUDRModel1.Store.MOSTRAR_DATOSU">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CRUDRModel1.MOSTRAR_DATOSU_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+                <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+                <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="P_SELECCIONAR" FunctionName="CRUDRModel1.Store.P_SELECCIONAR">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CRUDRModel1.P_SELECCIONAR_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+                <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+                <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PRO_SELECCIONAR" FunctionName="CRUDRModel1.Store.PRO_SELECCIONAR">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CRUDRModel1.PRO_SELECCIONAR_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+                <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+                <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PROC_SELEC" FunctionName="CRUDRModel1.Store.PROC_SELEC">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CRUDRModel1.PROC_SELEC_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+                <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+                <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PROC_TODO" FunctionName="CRUDRModel1.Store.PROC_TODO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CRUDRModel1.PROC_TODO_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+                <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+                <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PROC_TODOP" FunctionName="CRUDRModel1.Store.PROC_TODOP">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CRUDRModel1.PROC_TODOP_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+                <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+                <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PROC_TODOPP" FunctionName="CRUDRModel1.Store.PROC_TODOPP">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CRUDRModel1.PROC_TODOPP_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+                <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+                <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PROCED_SELEC" FunctionName="CRUDRModel1.Store.PROCED_SELEC">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CRUDRModel1.PROCED_SELEC_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+                <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+                <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="AGREGAR" FunctionName="CRUDRModel1.Store.AGREGAR" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

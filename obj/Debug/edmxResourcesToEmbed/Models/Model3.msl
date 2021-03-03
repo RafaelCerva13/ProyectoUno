@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CRUDRModel2StoreContainer" CdmEntityContainer="CRUDREntities2">
+    <EntitySetMapping Name="PERSONAL">
+      <EntityTypeMapping TypeName="CRUDRModel2.PERSONAL">
+        <MappingFragment StoreEntitySet="PERSONAL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+          <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+          <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="AGREGAR" FunctionName="CRUDRModel2.Store.AGREGAR" />
+    <FunctionImportMapping FunctionImportName="AGREGAR_DATOS" FunctionName="CRUDRModel2.Store.AGREGAR_DATOS" />
+    <FunctionImportMapping FunctionImportName="CARGAR_DATOS" FunctionName="CRUDRModel2.Store.CARGAR_DATOS" />
+    <FunctionImportMapping FunctionImportName="LISTAR_ESTADO" FunctionName="CRUDRModel2.Store.LISTAR_ESTADO" />
+    <FunctionImportMapping FunctionImportName="MOSTRAR_DATOS" FunctionName="CRUDRModel2.Store.MOSTRAR_DATOS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CRUDRModel2.MOSTRAR_DATOS_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+          <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+          <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MOSTRAR_DATOSP" FunctionName="CRUDRModel2.Store.MOSTRAR_DATOSP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CRUDRModel2.MOSTRAR_DATOSP_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+          <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+          <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MOSTRAR_DATOSU" FunctionName="CRUDRModel2.Store.MOSTRAR_DATOSU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CRUDRModel2.MOSTRAR_DATOSU_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+          <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+          <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="P_SELECCIONAR" FunctionName="CRUDRModel2.Store.P_SELECCIONAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CRUDRModel2.P_SELECCIONAR_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+          <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+          <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PRO_SELECCIONAR" FunctionName="CRUDRModel2.Store.PRO_SELECCIONAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CRUDRModel2.PRO_SELECCIONAR_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+          <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+          <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_SELEC" FunctionName="CRUDRModel2.Store.PROC_SELEC">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CRUDRModel2.PROC_SELEC_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+          <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+          <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_TODO" FunctionName="CRUDRModel2.Store.PROC_TODO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CRUDRModel2.PROC_TODO_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+          <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+          <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_TODOP" FunctionName="CRUDRModel2.Store.PROC_TODOP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CRUDRModel2.PROC_TODOP_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+          <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+          <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_TODOPP" FunctionName="CRUDRModel2.Store.PROC_TODOPP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CRUDRModel2.PROC_TODOPP_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+          <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+          <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROCED_SELEC" FunctionName="CRUDRModel2.Store.PROCED_SELEC">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CRUDRModel2.PROCED_SELEC_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO_P" ColumnName="APELLIDO_P" />
+          <ScalarProperty Name="APELLIDO_M" ColumnName="APELLIDO_M" />
+          <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

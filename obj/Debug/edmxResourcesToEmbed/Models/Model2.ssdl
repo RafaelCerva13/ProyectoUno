@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CRUDRModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="PERSONAL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="15" />
+    <Property Name="APELLIDO_P" Type="varchar" MaxLength="15" />
+    <Property Name="APELLIDO_M" Type="varchar" MaxLength="15" />
+    <Property Name="EDAD" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <Function Name="AGREGAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NOMBRE" Type="varchar" Mode="In" />
+    <Parameter Name="APELLIDO_P" Type="varchar" Mode="In" />
+    <Parameter Name="APELLIDO_M" Type="varchar" Mode="In" />
+    <Parameter Name="EDAD" Type="int" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="LISTAR_ESTADO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="MOSTRAR_DATOS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="MOSTRAR_DATOSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="MOSTRAR_DATOSU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="P_SELECCIONAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PRO_SELECCIONAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PROC_SELEC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+    <Parameter Name="NOMBRE" Type="varchar" Mode="In" />
+    <Parameter Name="APELLIDO_P" Type="varchar" Mode="In" />
+    <Parameter Name="APELLIDO_M" Type="varchar" Mode="In" />
+    <Parameter Name="EDAD" Type="int" Mode="In" />
+    <Parameter Name="IosActive" Type="bit" Mode="In" />
+    <Parameter Name="ELEGIR" Type="char" Mode="In" />
+  </Function>
+  <Function Name="PROC_TODO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+    <Parameter Name="NOMBRE" Type="varchar" Mode="In" />
+    <Parameter Name="APELLIDO_P" Type="varchar" Mode="In" />
+    <Parameter Name="APELLIDO_M" Type="varchar" Mode="In" />
+    <Parameter Name="EDAD" Type="int" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="ELEGIR" Type="char" Mode="In" />
+  </Function>
+  <Function Name="PROC_TODOP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+    <Parameter Name="NOMBRE" Type="varchar" Mode="In" />
+    <Parameter Name="APELLIDO_P" Type="varchar" Mode="In" />
+    <Parameter Name="APELLIDO_M" Type="varchar" Mode="In" />
+    <Parameter Name="EDAD" Type="int" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="ELEGIR" Type="char" Mode="In" />
+  </Function>
+  <Function Name="PROC_TODOPP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+    <Parameter Name="NOMBRE" Type="varchar" Mode="In" />
+    <Parameter Name="APELLIDO_P" Type="varchar" Mode="In" />
+    <Parameter Name="APELLIDO_M" Type="varchar" Mode="In" />
+    <Parameter Name="EDAD" Type="int" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="ELEGIR" Type="char" Mode="In" />
+  </Function>
+  <Function Name="PROCED_SELEC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="CRUDRModel1StoreContainer">
+    <EntitySet Name="PERSONAL" EntityType="Self.PERSONAL" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
